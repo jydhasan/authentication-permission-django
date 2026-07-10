@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Dashboard</h3>
+<p>Welcome, {{ user.username }}!</p>
+<p>Your Roles: {{ user.get_roles|join:", " }}</p>
+
+{% if user.is_superuser %}
+    <a href="{% url 'role_list' %}" class="btn btn-dark">Manage Roles (Super Admin)</a>
+{% endif %}
+{% endblock %}

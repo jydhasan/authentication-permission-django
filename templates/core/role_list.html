@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Role List</h3>
+<a href="{% url 'role_create' %}" class="btn btn-success mb-3">+ New Role</a>
+<table class="table table-bordered">
+<thead><tr><th>Role</th><th>Permissions</th><th>Action</th></tr></thead>
+<tbody>
+{% for group in groups %}
+<tr>
+    <td>{{ group.name }}</td>
+    <td>{{ group.permissions.count }}</td>
+    <td>
+        <a href="{% url 'role_edit' group.id %}" class="btn btn-sm btn-primary">Edit</a>
+        <a href="{% url 'role_delete' group.id %}" class="btn btn-sm btn-danger"
+           onclick="return confirm('ডিলিট করবেন?')">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
