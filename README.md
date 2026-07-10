@@ -1,3 +1,4 @@
+[Claude link](https://claude.ai/share/4d87cc70-63d9-4ff4-8627-a3618f3180a2)
 # Django RBAC Project
 
 A Django-based **Role-Based Access Control (RBAC)** system built using Django's built-in **Groups** and **Permissions** framework. Includes custom user authentication (Login/Register), a Super Admin panel, and fully dynamic role & permission management — no hardcoded roles.
